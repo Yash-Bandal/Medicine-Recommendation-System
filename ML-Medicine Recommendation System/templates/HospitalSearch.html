@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Place Search</title>
+    <!-- <title>Common Diseases Chart</title>  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script> 
+
+    <link type="image" rel="icon" href="https://i.pinimg.com/736x/6f/0b/af/6f0baf42f323c489eb4366b7e65d486c.jpg" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .navbar-brand {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        body {
+            background-image: url("");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+        
+    </style>
+</head>
+
+<body>
+   
+    <link type="text/css" rel="stylesheet" href="/WebFront/MainWebfront/css/style.css" />
+    <link type="text/css" rel="stylesheet" href="/WebFront/MainWebfront/css/font-awesome.min.css" /> 
+    <link type="text/css" rel="stylesheet" href="/WebFront/MainWebfront/css/owl.carousel.min.css" />
+    <link type="text/css" rel="stylesheet" href="/WebFront/MainWebfront/css/owl.theme.default.min.css" />
+    
+    <link type="image" rel="icon" href="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/800px-Flag_of_India.svg.png?20111003033457" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,600i,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,500i,600,600i" rel="stylesheet">
+    <style>  .logo {
+        width: 70px;
+        height: 70px;
+        color: black;
+        margin-top: 0;
+        margin-left: 1px;
+    }
+    .myimg {
+            width: 70px;
+            height: 70px;
+            border: 2px solid rgb(255, 249, 249);
+            border-radius: 50%;
+        }
+    </style>
+ 
+
+    <nav>
+        <div class="container">
+            <div class="menu-par">
+                <div class="logo">
+                    <img class="myimg" src="/static/images/Logo.png" alt="">
+                </div>
+                <div class="logo-par">
+                  
+                    <a href="index.html">
+                        <h2 style="color: #0074b2;">Wellness Weave</h2> 
+                    </a>
+                </div>
+                <!-- </style> -->
+                <div class="nav">
+                    <ul>
+                        <li><a class="menu_hover" href="FrontEnd.html" style="color: #054524;">Home</a></li>
+                        <li><a class="menu_hover" href="HospitalSearch.html" style="color: #054524;">Search Hospital</a></li>
+                        <li><a class="menu_hover" href="index2.html" style="color: #054524;">Our Pharmacy</a></li>
+
+                    </ul>
+                </div>
+                <div class="toggle-btn">
+                    <i class="fa fa-bars"></i>
+                </div>
+
+                <form class="d-flex" role="search">
+                    <input id="searchInput" class="form-control me-2" type="search" placeholder="Search Hospitals" aria-label="Search">
+                    <button class="btn btn-outline-success" type="button" id="searchButton">Search</button>
+                </form>
+          
+            </div>
+            
+        </div>
+        
+    </nav>
+
+   <br><br><br><br><br>
+
+   <header id="custom-header">
+       <h1 class="mt-4 my-4 text-center text-white ">Search Results</h1>
+   </header>
+    <div class="container">
+        <div id="wikipediaResults" class="list-group">
+            <!-- Results will be displayed here -->
+        </div>
+    </div>
+    <br>
+    <br>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="yash.js"></script>
+
+    <div> 
+        <style>
+            h1 {
+                text-align: center;
+                color: green;
+            }
+        </style>
+        <h1>Common Diseases Chart</h1> 
+
+        <div> 
+            <canvas id="barChartID"></canvas> 
+        </div> 
+    </div> 
+
+    
+    <script> 
+        // Common diseases data
+        const diseasesData = {
+            labels: ['Malaria', 'Influenza', 'HIV/AIDS', 'Tuberculosis', 'Diarrheal ', 'Stroke', 'COPD', 'heart disease', 'respiratory infections', 'Lung cancers'],
+            data: [2280000, 646000, 303000, 187000, 131700, 115300, 113800, 113100, 111300, 106000] // Example fabricated data in terms of number of cases
+        };
+
+        // Bar chart
+        new Chart($("#barChartID"), { 
+            type: 'bar', 
+            options: { 
+                legend: { display: true }, 
+                indexAxis: 'x', 
+                title: { 
+                    display: true, 
+                    text: 'Common Diseases Chart' 
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Number of Cases'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Common Worldwide Disease',
+                            font: {
+                                size: 16 // Adjust the font size here
+                            }
+                        }
+                    }
+                }
+            }, 
+            data: { 
+                labels: diseasesData.labels, 
+                datasets: [ 
+                    { 
+                        label: "Number of Cases", 
+                        backgroundColor: 'rgba(54, 162, 235, 0.5)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        hoverBackgroundColor: 'rgba(255, 99, 132, 0.8)',
+                        hoverBorderColor: 'rgba(54, 162, 235, 1)',
+                        data: diseasesData.data 
+                    } 
+                ] 
+            }			 
+        }); 
+    </script> 
+
+<br>
+<br>
+
+
+    <footer>
+        <div class="container">
+            <div class="footer-par">
+                <div class="footer-1">
+                    <h2> Wellness Weave</h2>
+                </div>
+                <div class="footer-2 fot-info">
+                    <h3>WellnessWeave Overall India</h3>
+               
+    
+                    <ul>
+                        <li><a href="https://www.jspmrscoe.edu.in/">Tathawade</a></li>
+                        <li><a href="https://tssm.edu.in/">Katraj</a></li>
+                        <li><a href="https://www.jspmjscoe.edu.in/about/jspm-wagholi-campus">Wagholi</a></li>
+                    
+                    
+       
+                       
+                    </ul>
+                    
+                </div>
+                <div class="footer-3 fot-info">
+                    <h3>Visit For More</h3>
+                    <ul> <li><a href="URL_FOR_MEGHALAYA">JSPM's Rajarshi Shahu College Of Engineering </a></li>
+                        <li><a href="URL_FOR_MIZORAM">JSPM'S JAYAWANT INSTITUTE OF PHARMACY</a></li>
+                        <li><a href="URL_FOR_NAGALAND"></a></li>
+                        <li><a href="URL_FOR_ODISHA"></a></li>
+            
+                    </ul>
+                </div>
+                <div class="footer-4 fot-info">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><a href="https://github.com/YashL3616">GitHub</a></li>
+                        <li><a href="https://github.com/YashL3616">Yash</a></li>
+                        <li><a href="https://github.com/YashL3616">Yash</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <p class="copyright">EDI2024</p>
+    </footer>
+    
+
+     
+
+    <script type="text/javascript" src="/WebFront/MainWebfront/js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="/WebFront/MainWebfront/js/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="/WebFront/MainWebfront/js/extrenaljq.js"></script>
+</body>
+
+</html>

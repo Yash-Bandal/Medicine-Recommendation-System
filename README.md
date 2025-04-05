@@ -58,6 +58,6 @@ python main.py
 - Deployment as a web application for accessibility.
 - Addition of more diseases and symptoms to the dataset.
 
-## A YB Productions Originals 💊 
+## A YB Productions Original 💊 
 
 

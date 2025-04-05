@@ -16,3 +16,32 @@ Continuous Improvement: Our system is designed for continuous improvement. As we
 Take charge of your health with our Personalized Medical Recommendation System. Your well-being is our priority, and we're dedicated to providing you with the tools and insights you need for a healthier, happier life.
 
 Requirements: Anaconda Navigator,Jupyter notebook,Required libraries
+
+## Code Example
+
+```python
+models = {
+    'SVC': SVC(kernel='linear'),
+    'RandomForest': RandomForestClassifier(n_estimators=100, random_state=42),
+    'GradientBoosting': GradientBoostingClassifier(n_estimators=100, random_state=42),
+    'KNeighbors': KNeighborsClassifier(n_neighbors=5),
+    'MultinomialNB': MultinomialNB()
+}
+
+def helper(dis):
+    desc = description[description['Disease'] == dis]['Description']
+    desc = " ".join([w for w in desc])
+
+    pre = precautions[precautions['Disease'] == dis][['Precaution_1', 'Precaution_2', 'Precaution_3', 'Precaution_4']]
+    pre = [col for col in pre.values]
+
+    med = medications[medications['Disease'] == dis]['Medication']
+    med = [med for med in med.values]
+
+    die = diets[diets['Disease'] == dis]['Diet']
+    die = [die for die in die.values]
+
+    wrkout = workout[workout['disease'] == dis]['workout']
+
+    return desc, pre, med, die, wrkout
+```

@@ -51,7 +51,7 @@ python main.py
 ```
 
 ## UI Preview
-![ui](https://github.com/Yash-Bandal/Medicine-Recommendation-System/blob/e4be9bcdd7ac0f4e38cac19ac8f65c2451925295/ML-Medicine%20Recommendation%20System/imag/med.PNG) 
+![ui](https://github.com/Yash-Bandal/Medicine-Recommendation-System/blob/ad25707f9eff50c8545dcf9bab6ce7db429542ea/ML-Medicine%20Recommendation%20System/imag/med.PNG) 
 
 ## Future Enhancements
 - Integration of deep learning models for improved accuracy.

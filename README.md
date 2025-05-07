@@ -3,7 +3,7 @@
 ## Overview
 This project utilizes machine learning to predict diseases based on input symptoms and provides recommendations such as medications, workouts, precautions, and dietary suggestions.
 
-## Features
+## Features 
 - Predicts diseases based on symptoms using multiple machine learning models.
 - Provides a brief description of the predicted disease.
 - Suggests relevant medications.

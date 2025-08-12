@@ -1,4 +1,4 @@
-# Machine Learning-Based Medicine Recommendation and Disease Prediction 🩺 📊
+# Machine Learning-Based Medicine Recommendation and Disease Prediction 🩺 
 
 ## Overview
 This project utilizes machine learning to predict diseases based on input symptoms and provides recommendations such as medications, workouts, precautions, and dietary suggestions.
@@ -13,11 +13,6 @@ This project utilizes machine learning to predict diseases based on input sympto
 ## Technologies Used
 - **Programming Language**: Python
 - **Machine Learning Models**:
-  - Support Vector Classifier (SVC)
-  - Random Forest Classifier
-  - Gradient Boosting Classifier
-  - K-Nearest Neighbors (KNeighbors)
-  - Multinomial Naive Bayes (MultinomialNB)
 - **Libraries**:
   - Scikit-learn
   - Pandas

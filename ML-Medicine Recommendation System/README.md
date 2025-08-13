@@ -17,6 +17,8 @@ Take charge of your health with our Personalized Medical Recommendation System. 
 
 Requirements: Anaconda Navigator,Jupyter notebook,Required libraries
 
+[Link](https://www.kaggle.com/code/yashbandal25/medicine-recommendation-system/edit)
+
 ## Code Example
 
 ```python

@@ -19,6 +19,7 @@ Requirements: Anaconda Navigator,Jupyter notebook,Required libraries
 
 [Link](https://www.kaggle.com/code/yashbandal25/medicine-recommendation-system/edit)
 
+[Oldweb](https://yash-bandal.github.io/Medicine-Recommendation-System/ML-Medicine%20Recommendation%20System/templates/index2.html)
 ## Code Example
 
 ```python

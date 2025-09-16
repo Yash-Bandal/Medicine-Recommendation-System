@@ -1,5 +1,5 @@
 # Machine Learning-Based Medicine Recommendation and Disease Prediction 🩺 
- 
+  
 ## Overview
 This project utilizes machine learning to predict diseases based on input symptoms and provides recommendations such as medications, workouts, precautions, and dietary suggestions.
 

@@ -1,58 +1,215 @@
-## Machine Learning-Based Medicine Recommendation and Disease Prediction 🩺 
-  
-### Overview
-This project utilizes machine learning to predict diseases based on input symptoms and provides recommendations such as medications, workouts, precautions, and dietary suggestions.
- 
-### Features 
-- Predicts diseases based on symptoms using multiple machine learning models.
-- Provides a brief description of the predicted disease.
-- Suggests relevant medications.
-- Offers precautionary measures to manage or prevent the disease.
-- Recommends dietary plans and workout routines specific to the predicted disease.
+# Medicine Recommendation System
 
-### Technologies Used
-- **Programming Language**: Python
-- **Machine Learning Models**:
-- **Libraries**:
-  - Scikit-learn
-  - Pandas
-  - NumPy
+A machine learning powered web application that predicts diseases based on user symptoms and recommends medications, diets, precautions, and workouts through an interactive health dashboard.
 
-### Dataset (Multiclass - Structured)
-The project uses multiple datasets containing information about diseases, their symptoms, medications, precautions, diets, and workouts.
-
-### Model Training
-The models are trained on labeled datasets containing symptoms and their corresponding diseases. The best-performing model is selected for making predictions based on symptoms provided by the user.
-
-### How It Works
-1. The user inputs symptoms.
-2. The trained models predict the most probable disease.
-3. The helper function fetches relevant details:
-   - Disease description
-   - Recommended precautions
-   - Suggested medications
-   - Diet plans
-   - Workout recommendations
-4. The results are displayed to the user.
+<br>
 
 
 
-### Setup Instructions
-```bash
-git clone [https://github.com/yourusername/your-repo-name.git](https://github.com/Yash-Bandal/Medicine-Recommendation-System.git)
-cd Medicine-Recommendation-System
+**First View**
+
+
+<table>
+  <tr>
+    <td align="center" width="600">
+      <img src="https://github.com/Yash-Bandal/Medicine-Recommendation-System/blob/6b31baea62fc9638803c9000b434a4060da1453c/frontend/health-dashboard/src/assets/M2.png" width="300"/>
+      <br>
+      <b>Dashboard</b>
+    </td>
+    <td align="center" width="600">
+      <img src="https://github.com/Yash-Bandal/Medicine-Recommendation-System/blob/6b31baea62fc9638803c9000b434a4060da1453c/frontend/health-dashboard/src/assets/M21.png" width="300"/>
+      <br>
+      <b>Metrics</b>
+    </td>
+  </tr>
+</table>
+
+<br>
+
+## Project Overview
+
+This application allows users to input symptoms and receive:
+
+* Predicted disease
+* Recommended medications
+* Suggested diet plans
+* Precautions
+* Workout recommendations
+
+The system uses machine learning models trained on a medical dataset containing multiple diseases and symptoms.
+
+<br>
+
+
+
+
+
+## Dataset Information
+
+The system is trained on a medical dataset containing:
+
+| Dataset Component   | Count      |
+| ------------------- | ---------- |
+| Total Diseases      | 42         |
+| Total Symptoms      | 132        |
+| Classification Type | Multiclass |
+
+
+
+<br>
+
+
+
+## Machine Learning Models
+
+Multiple machine learning models were evaluated for disease prediction.
+
+| Model                     | Accuracy |
+| ------------------------- | -------- |
+| Support Vector Classifier | 92%      |
+| Random Forest             | 96%      |
+| Gradient Boosting         | 83.6%    |
+| K-Nearest Neighbors       | 92%      |
+| Multinomial Naive Bayes   | 96%      |
+
+Random Forest and Multinomial Naive Bayes achieved the highest accuracy.
+
+<br>
+
+
+
+## Tech Stack
+
+### Backend
+
+* Python
+* Flask
+* Scikit-learn
+* Pandas
+* NumPy
+
+### Frontend
+
+* React
+* Vite
+* TailwindCSS
+* Recharts
+* Zustand (state management)
+
+### Machine Learning
+
+* Scikit-learn
+* Multiclass classification
+* Pickle model deployment
+
+<br>
+
+
+
+## Project Structure
+
+```
+Medicine-Recommendation-System
+│
+├── backend
+│   ├── main.py
+│   ├── model.pkl
+│   ├── requirements.txt
+│   └── datasets
+│       ├── description.csv
+│       ├── diets.csv
+│       ├── medications.csv
+│       ├── precautions_df.csv
+│       ├── Symptom-severity.csv
+│       ├── symtoms_df.csv
+│       ├── Training.csv
+│       └── workout_df.csv
+│
+└── frontend
+    └── health-dashboard
+        ├── public
+        └── src
+            ├── assets
+            ├── components
+            ├── hooks
+            ├── pages
+            └── store
+```
+
+<br>
+
+
+
+## How the System Works
+
+1. User enters symptoms in the dashboard.
+2. The frontend sends a request to the backend API.
+3. The backend loads the trained ML model.
+4. Symptoms are encoded and passed to the model.
+5. The model predicts the most likely disease.
+6. The system retrieves recommendations from datasets.
+7. Results are displayed in the dashboard.
+
+<br>
+
+
+
+## Installation Guide
+
+### Clone the Repository
+
+```
+git clone https://github.com/Yash-Bandal/medicine-recommendation-system.git
+cd medicine-recommendation-system
+```
+
+<br>
+
+
+
+### Backend Setup
+
+```
+cd backend
 pip install -r requirements.txt
 python main.py
 ```
 
-### UI Preview
-![ui](https://github.com/Yash-Bandal/Medicine-Recommendation-System/blob/ad25707f9eff50c8545dcf9bab6ce7db429542ea/ML-Medicine%20Recommendation%20System/imag/med.PNG) 
+Backend runs on:
 
-### Future Enhancements
-- Integration of deep learning models for improved accuracy.
-- Deployment as a web application for accessibility.
-- Addition of more diseases and symptoms to the dataset.
+```
+http://127.0.0.1:5000
 
-## A YB Productions Original 💊 
+# or - check main.py
+
+http://127.0.0.1:10000
+```
+
+<br>
+
+
+
+### Frontend Setup
+
+```
+cd frontend/health-dashboard
+npm install
+npm run dev
+```
+
+Frontend runs on:
+
+```
+http://localhost:5173
+```
+
+<br>
+
+
+## License
+
+This project is licensed under the MIT License.
+
+<br>
 
 

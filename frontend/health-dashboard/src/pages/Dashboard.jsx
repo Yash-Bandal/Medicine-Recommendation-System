@@ -20,7 +20,8 @@ const Dashboard = () => {
 
   
   useEffect(() => {
-    fetch("http://127.0.0.1:5000/api/symptoms")
+    // fetch("http://127.0.0.1:5000/api/symptoms")
+    fetch("https://medicine-recommendation-system-cbmi.onrender.com/api/symptoms")
       .then((res) => res.json())
       .then((data) => setSymptomsList(data))
       .catch((err) => console.error(err));
@@ -36,7 +37,8 @@ const onSubmit = async (data) => {
     setError(null);   // reset previous error
     setResult(null);  // clear previous result
 
-    const response = await fetch("http://127.0.0.1:5000/api/predict", {
+    // const response = await fetch("http://127.0.0.1:5000/api/predict", {
+      const response = await fetch("https://medicine-recommendation-system-cbmi.onrender.com/api/predict", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

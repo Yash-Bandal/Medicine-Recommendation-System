@@ -19,26 +19,26 @@ import {
 } from "recharts";
 
 const modelAccuracy = [
-  { model: "SVC", accuracy: 92 },
-  { model: "RandomForest", accuracy: 96 },
-  { model: "GradientBoosting", accuracy: 83.6 },
-  { model: "KNN", accuracy: 92 },
-  { model: "MultinomialNB", accuracy: 96 },
+  { model: "SVC", accuracy: 95.6 },
+  { model: "RandomForest", accuracy: 97.1 },
+  { model: "GradientBoosting", accuracy: 73.9 },
+  { model: "KNN", accuracy: 97.1 },
+  { model: "MultinomialNB", accuracy: 96.56 },
 ];
 
 const datasetComposition = [
-  { name: "Diseases", value: 42 },
+  { name: "Diseases", value: 57 },
   { name: "Symptoms", value: 132 },
 ];
 
 const COLORS = ["#6366f1", "#22c55e"];
 
 const modelDistribution = [
-  { name: "SVC", value: 92 },
-  { name: "RandomForest", value: 96 },
-  { name: "GradientBoosting", value: 83.6 },
-  { name: "KNN", value: 92 },
-  { name: "MultinomialNB", value: 96 },
+  { name: "SVC", value: 95.6 },
+  { name: "RandomForest", value: 97.1 },
+  { name: "GradientBoosting", value: 73.9 },
+  { name: "KNN", value: 97.1 },
+  { name: "MultinomialNB", value: 95.56 },
 ];
 
 const Statistics = () => {
@@ -73,7 +73,7 @@ const Statistics = () => {
         <div className="rounded-2xl border bg-white p-6 shadow-sm">
           <Database className="text-indigo-600 mb-2" />
           <p className="text-sm text-slate-500">Total Diseases</p>
-          <p className="text-2xl font-bold text-slate-900">42</p>
+          <p className="text-2xl font-bold text-slate-900">57</p>
         </div>
 
         <div className="rounded-2xl border bg-white p-6 shadow-sm">
@@ -199,7 +199,7 @@ const Statistics = () => {
           <li>• Random Forest and Multinomial Naive Bayes achieved the highest accuracy of 96%.</li>
           <li>• Support Vector Classifier and KNN both achieved 92% accuracy.</li>
           <li>• Gradient Boosting performed slightly lower at ~83.6%.</li>
-          <li>• The dataset contains 42 disease classes and 132 symptoms.</li>
+          <li>• The dataset contains 57 disease classes and 132 symptoms.</li>
           <li>• The system performs multiclass classification to predict diseases based on symptom combinations.</li>
         </ul>
 

@@ -186,7 +186,7 @@ const onSubmit = async (data) => {
                  Diseases
               </div>
               <div className="mt-3 text-2xl font-semibold text-slate-900">
-                42 {/* ← replace with real count when available */}
+                57 {/* ← replace with real count when available */}
               </div>
             </div>
             {/* Status */}

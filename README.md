@@ -50,7 +50,7 @@ The system is trained on a medical dataset containing:
 
 | Dataset Component   | Count      |
 | ------------------- | ---------- |
-| Total Diseases      | 42         |
+| Total Diseases      | 57         |
 | Total Symptoms      | 132        |
 | Classification Type | Multiclass |
 
@@ -66,11 +66,11 @@ Multiple machine learning models were evaluated for disease prediction.
 
 | Model                     | Accuracy |
 | ------------------------- | -------- |
-| Support Vector Classifier | 92%      |
-| Random Forest             | 96%      |
-| Gradient Boosting         | 83.6%    |
-| K-Nearest Neighbors       | 92%      |
-| Multinomial Naive Bayes   | 96%      |
+| Support Vector Classifier | 95.56%      |
+| Random Forest             | 97.3%      |
+| Gradient Boosting         | 72.9%    |
+| K-Nearest Neighbors       | 95.6%      |
+| Multinomial Naive Bayes   | 97.2%      |
 
 Random Forest and Multinomial Naive Bayes achieved the highest accuracy.
 

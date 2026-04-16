@@ -13,3 +13,11 @@ To use this, comment out old codes in `main.py`
 Has `57` diseases, and `132` symptoms
 - `/dataset-new`
 - `model-ex.pkf`
+
+
+
+<br>
+
+### Backend
+- Hosted on [Render](https://medicine-recommendation-system-cbmi.onrender.com/) - [Test](https://medicine-recommendation-system-cbmi.onrender.com/api/symptoms)
+- Uptimer robot - 5 mins - ([Status page](https://stats.uptimerobot.com/PKVs7YzkjO))

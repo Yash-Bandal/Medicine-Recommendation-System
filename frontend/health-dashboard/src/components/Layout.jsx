@@ -2,7 +2,13 @@
 import Sidebar from "./Sidebar";
 import Header from "./Header";
 import { Outlet } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useRef, useState, useEffect } from "react";
+
+import ScrollToTop from "./ScrollToTop"; 
+
+
+
+const scrollRef = useRef(null);
 
 
 const Layout = () => {
@@ -25,7 +31,7 @@ const Layout = () => {
     return (
       <div className="min-h-screen flex items-center justify-center px-6 bg-white dark:bg-slate-950 transition-colors duration-300">
 
-        <div className="flex flex-col items-center gap-7">
+        <div ref={scrollRef}  className="flex flex-col items-center gap-7">
 
           <p className="text-xl sm:text-2xl font-light tracking-widest text-slate-600 dark:text-slate-300">
             Preparing your dashboard
@@ -79,6 +85,8 @@ const Layout = () => {
 
       {/* Main content area */}
       <div className="flex-1 overflow-y-auto">
+
+          <ScrollToTop containerRef={scrollRef} />
 
         {/* Header */}
         <Header />

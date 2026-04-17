@@ -1,11 +1,16 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
-const ScrollToTop = () => {
+const ScrollToTop = ({ containerRef }) => {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+    if (containerRef?.current) {
+      containerRef.current.scrollTo({ top: 0 });
+    }
+
+    // fallback (harmless)
+    window.scrollTo({ top: 0 });
   }, [pathname]);
 
   return null;
